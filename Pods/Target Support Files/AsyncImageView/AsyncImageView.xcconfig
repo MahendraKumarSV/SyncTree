@@ -1,0 +1,4 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/AsyncImageView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AsyncImageView" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Braintree" "${PODS_ROOT}/Headers/Public/FBSDKCoreKit" "${PODS_ROOT}/Headers/Public/FBSDKLoginKit" "${PODS_ROOT}/Headers/Public/FBSDKShareKit" "${PODS_ROOT}/Headers/Public/HockeySDK" "${PODS_ROOT}/Headers/Public/LatoFont"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

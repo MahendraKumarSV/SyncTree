@@ -1,0 +1,102 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AsyncImageView (1.5.1)
+  - Bolts (1.2.2):
+    - Bolts/AppLinks (= 1.2.2)
+    - Bolts/Tasks (= 1.2.2)
+  - Bolts/AppLinks (1.2.2):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.2.2)
+  - Braintree (3.9.3):
+    - Braintree/API (= 3.9.3)
+    - Braintree/Coinbase (= 3.9.3)
+    - Braintree/Drop-In (= 3.9.3)
+    - Braintree/Payments (= 3.9.3)
+    - Braintree/PayPal (= 3.9.3)
+    - Braintree/UI (= 3.9.3)
+    - Braintree/Venmo (= 3.9.3)
+  - Braintree/API (3.9.3)
+  - Braintree/Apple-Pay (3.9.3):
+    - Braintree/Payments
+  - Braintree/Coinbase (3.9.3):
+    - Braintree/API
+  - Braintree/Drop-In (3.9.3):
+    - Braintree/API
+    - Braintree/Coinbase
+    - Braintree/Payments
+    - Braintree/PayPal
+    - Braintree/UI
+    - Braintree/Venmo
+  - Braintree/Payments (3.9.3):
+    - Braintree/API
+    - Braintree/Coinbase
+    - Braintree/PayPal
+    - Braintree/Venmo
+  - Braintree/PayPal (3.9.3):
+    - Braintree/API
+    - Braintree/UI
+  - Braintree/UI (3.9.3):
+    - Braintree/API
+  - Braintree/Venmo (3.9.3):
+    - Braintree/API
+  - FBSDKCoreKit (4.6.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.6.0)
+    - FBSDKCoreKit/no-arc (= 4.6.0)
+  - FBSDKCoreKit/arc (4.6.0):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.6.0):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - FBSDKLoginKit (4.6.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.6.0):
+    - FBSDKCoreKit
+  - HockeySDK (3.8.5):
+    - HockeySDK/AllFeaturesLib (= 3.8.5)
+  - HockeySDK/AllFeaturesLib (3.8.5)
+  - LatoFont (1.0.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AsyncImageView
+  - Braintree (~> 3.9.3)
+  - Braintree/Apple-Pay
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - HockeySDK
+  - LatoFont
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AsyncImageView: db9433939160710b34a5c249479e03af2a2121b0
+  Bolts: 20a2bd788273360cb1e31530dc19b8544eef2544
+  Braintree: 996027dcc8633569f2405bc57dca11f367050c60
+  FBSDKCoreKit: 9954492d90c5fd65ae831395697a1660360d61f1
+  FBSDKLoginKit: 3d07febbfa884b9878cacba54f705bb41f07d4b6
+  FBSDKShareKit: f474f1123791e215d0299b98b3ee92ddd9187d86
+  HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
+  LatoFont: bcfb0239c339af9aacf4b3061d5268e53e080732
+
+COCOAPODS: 0.39.0

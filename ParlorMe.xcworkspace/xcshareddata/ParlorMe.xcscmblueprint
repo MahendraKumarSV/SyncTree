@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A74DC15CD0A62146D64F20B4BCBAD8E751FE77B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E2DF85DF52D392F8049FCDE9CA310B47656D96DE" : 0,
+    "A74DC15CD0A62146D64F20B4BCBAD8E751FE77B1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2760856C-A885-487F-A27E-9905CE0CA082",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E2DF85DF52D392F8049FCDE9CA310B47656D96DE" : "mtcsp-ios",
+    "A74DC15CD0A62146D64F20B4BCBAD8E751FE77B1" : "SyncTree\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ParlorMe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ParlorMe.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MahendraKumarSV\/SyncTree.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A74DC15CD0A62146D64F20B4BCBAD8E751FE77B1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:synctree\/mtcsp-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2DF85DF52D392F8049FCDE9CA310B47656D96DE"
+    }
+  ]
+}
