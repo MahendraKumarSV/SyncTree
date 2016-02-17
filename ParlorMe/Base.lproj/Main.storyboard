@@ -5005,11 +5005,24 @@ XXXX XXXX XXXX 1234
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Account Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ7-Fy-2VA">
                                                 <rect key="frame" x="20" y="30" width="560" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="159" id="k70-tR-Pc8"/>
+                                                    <constraint firstAttribute="height" constant="24" id="t79-dI-oUK"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="121" y="28" width="159" height="24"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="k70-tR-Pc8"/>
+                                                        <exclude reference="t79-dI-oUK"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="k70-tR-Pc8"/>
+                                                        <include reference="t79-dI-oUK"/>
+                                                    </mask>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ka-iR-UhY" userLabel="Services">
@@ -5522,11 +5535,21 @@ XXXX XXXX XXXX 1234
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypG-ak-GFE">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="84" id="sed-bO-oKI"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="159" y="28" width="82" height="24"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sed-bO-oKI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="sed-bO-oKI"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -5592,9 +5615,6 @@ XXXX XXXX XXXX 1234
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="96" width="240" height="4"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="219" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pasadena, CA." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTt-st-MEG">
                                                     <rect key="frame" x="348" y="44" width="242" height="20"/>
@@ -5604,9 +5624,6 @@ XXXX XXXX XXXX 1234
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="168" y="47" width="62" height="13"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="218" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="7 years experience" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tx-ej-eaA">
                                                     <rect key="frame" x="80" y="44" width="243" height="20"/>
@@ -5616,18 +5633,12 @@ XXXX XXXX XXXX 1234
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="80" y="47" width="63" height="13"/>
-                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" text="Samuel A." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-Zd-YkT">
                                                     <rect key="frame" x="80" y="20" width="503" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="80" y="20" width="68" height="24"/>
-                                                    </variation>
                                                 </label>
                                                 <button opaque="NO" tag="552" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-sG-9S5">
                                                     <rect key="frame" x="348" y="64" width="60" height="20"/>
@@ -5640,9 +5651,6 @@ XXXX XXXX XXXX 1234
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="168" y="60" width="30" height="30"/>
-                                                    </variation>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LP4-zi-DTD">
                                                     <rect key="frame" x="79" y="65" width="18" height="17"/>
@@ -5657,8 +5665,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="8CU-ug-HW3"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="79" y="61" width="18" height="17"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="8CU-ug-HW3"/>
                                                         </mask>
@@ -5677,8 +5684,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="mXN-3D-bco"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="98" y="61" width="18" height="17"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="mXN-3D-bco"/>
                                                         </mask>
@@ -5697,8 +5703,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="Vrb-Fn-Bjs"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="116" y="61" width="18" height="17"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="Vrb-Fn-Bjs"/>
                                                         </mask>
@@ -5711,9 +5716,6 @@ XXXX XXXX XXXX 1234
                                                         <constraint firstAttribute="width" constant="18" id="EQU-E6-Gs4"/>
                                                         <constraint firstAttribute="height" constant="17" id="ijm-EJ-v9f"/>
                                                     </constraints>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="134" y="61" width="18" height="17"/>
-                                                    </variation>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" tag="1004" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SV4-qI-F08">
                                                     <rect key="frame" x="152" y="65" width="18" height="17"/>
@@ -5728,8 +5730,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="mwo-PV-V8d"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="152" y="61" width="18" height="17"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="mwo-PV-V8d"/>
                                                         </mask>
@@ -5741,9 +5742,6 @@ XXXX XXXX XXXX 1234
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="100"/>
-                                                    </variation>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRN-cY-zL0">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -5760,8 +5758,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="kpb-5d-5PY"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="184" y="16" width="30" height="30"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="U7t-DU-mbi"/>
                                                             <include reference="kpb-5d-5PY"/>
@@ -5780,8 +5777,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="aZo-tx-dDa"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="170" y="5" width="65" height="65"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="9eA-Js-RFe"/>
                                                             <include reference="aZo-tx-dDa"/>
@@ -7710,9 +7706,6 @@ XXXX XXXX XXXX 1234
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                 <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="34" y="315" width="70" height="18"/>
-                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA5-Zw-Aco">
                                                 <rect key="frame" x="117" y="308" width="143" height="30"/>
@@ -7725,9 +7718,6 @@ XXXX XXXX XXXX 1234
                                                     <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="122" y="308" width="75" height="30"/>
-                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odb-Zj-UTb">
                                                 <rect key="frame" x="266" y="308" width="143" height="30"/>
@@ -7740,14 +7730,12 @@ XXXX XXXX XXXX 1234
                                                     <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="203" y="308" width="74" height="30"/>
-                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhC-tL-ott">
                                                 <rect key="frame" x="415" y="308" width="143" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="50A-bz-laH"/>
                                                     <constraint firstAttribute="height" constant="30" id="efO-Ma-JGJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
@@ -7755,8 +7743,15 @@ XXXX XXXX XXXX 1234
                                                     <color key="titleColor" red="0.1529411765" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="283" y="308" width="75" height="30"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="50A-bz-laH"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="50A-bz-laH"/>
+                                                    </mask>
                                                 </variation>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Other amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uKl-sd-Xsw">
@@ -7839,7 +7834,9 @@ XXXX XXXX XXXX 1234
                                             <constraint firstItem="Iia-wB-7de" firstAttribute="leading" secondItem="RvW-8u-rzi" secondAttribute="trailing" constant="15" id="GnC-Xf-6U0"/>
                                             <constraint firstItem="fHa-lQ-zIt" firstAttribute="leading" secondItem="ZUF-7m-xWJ" secondAttribute="trailing" constant="4" id="HDW-jh-Kn4"/>
                                             <constraint firstItem="Mfi-HV-ZLG" firstAttribute="leading" secondItem="vTf-hh-kwl" secondAttribute="leading" constant="60" id="ITK-sH-3md"/>
-                                            <constraint firstItem="cA5-Zw-Aco" firstAttribute="leading" secondItem="gym-7K-S3q" secondAttribute="trailing" constant="18" id="KeC-GN-dB0"/>
+                                            <constraint firstItem="cA5-Zw-Aco" firstAttribute="leading" secondItem="gym-7K-S3q" secondAttribute="trailing" constant="18" id="KeC-GN-dB0">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                                            </constraint>
                                             <constraint firstItem="ZcT-lR-AS2" firstAttribute="width" secondItem="Yu7-8f-Rzx" secondAttribute="width" id="LX1-Ii-woD"/>
                                             <constraint firstItem="fHa-lQ-zIt" firstAttribute="top" secondItem="E5X-Gm-p7N" secondAttribute="bottom" constant="40" id="M21-x9-z7k"/>
                                             <constraint firstItem="diQ-Cs-tHm" firstAttribute="top" secondItem="uKl-sd-Xsw" secondAttribute="bottom" constant="35" id="MfX-YB-VWm"/>
@@ -8172,6 +8169,7 @@ XXXX XXXX XXXX 1234
                                                     <rect key="frame" x="40" y="220" width="520" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="290" id="72t-xB-SNp"/>
+                                                        <constraint firstAttribute="height" constant="26" id="if9-xI-spa"/>
                                                         <constraint firstAttribute="height" constant="27" id="qiu-3x-FFD"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
@@ -8180,12 +8178,13 @@ XXXX XXXX XXXX 1234
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="72t-xB-SNp"/>
+                                                            <exclude reference="if9-xI-spa"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="76" y="59" width="290" height="26"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="72t-xB-SNp"/>
+                                                            <include reference="if9-xI-spa"/>
                                                             <exclude reference="qiu-3x-FFD"/>
                                                         </mask>
                                                     </variation>
@@ -8428,13 +8427,21 @@ XXXX XXXX XXXX 1234
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Rating:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-oO-t4C">
                                                     <rect key="frame" x="8" y="25" width="132" height="25"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="1ky-hE-7iq"/>
                                                         <constraint firstAttribute="width" constant="132" id="u19-qG-HTO"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="8" y="25" width="132" height="20"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="1ky-hE-7iq"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="1ky-hE-7iq"/>
+                                                        </mask>
                                                     </variation>
                                                 </label>
                                                 <button opaque="NO" tag="530" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-gq-Blq">
@@ -8442,7 +8449,9 @@ XXXX XXXX XXXX 1234
                                                     <color key="backgroundColor" red="0.9882352941176471" green="0.20000000000000001" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="EyJ-9c-yWt"/>
-                                                        <constraint firstAttribute="height" constant="50" id="L9o-99-Kwi"/>
+                                                        <constraint firstAttribute="height" constant="50" id="L9o-99-Kwi">
+                                                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                                        </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                     <state key="normal" title="Select This Stylist">
@@ -8455,8 +8464,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="L9o-99-Kwi"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="50" y="82" width="300" height="50"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="EyJ-9c-yWt"/>
                                                             <include reference="L9o-99-Kwi"/>
@@ -9085,11 +9093,21 @@ XXXX XXXX XXXX 1234
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Repeat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gF-OR-PRt">
                                         <rect key="frame" x="283" y="10" width="57" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="1IA-o5-3LR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="179" y="25" width="65" height="21"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1IA-o5-3LR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="1IA-o5-3LR"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -9438,8 +9456,7 @@ XXXX XXXX XXXX 1234
                                                             <exclude reference="y6b-eg-XR2"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="13" y="9" width="346" height="14"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="y6b-eg-XR2"/>
                                                         </mask>
@@ -9457,14 +9474,13 @@ XXXX XXXX XXXX 1234
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="364" y="6" width="19" height="19"/>
-                                                    </variation>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Sqc-BI-Xws" firstAttribute="leading" secondItem="9r8-iY-fyq" secondAttribute="trailing" constant="5" id="6Gy-wF-5rO"/>
-                                                <constraint firstAttribute="centerY" secondItem="9r8-iY-fyq" secondAttribute="centerY" id="MH1-pb-QRM"/>
+                                                <constraint firstAttribute="centerY" secondItem="9r8-iY-fyq" secondAttribute="centerY" id="MH1-pb-QRM">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="-1"/>
+                                                </constraint>
                                                 <constraint firstItem="Sqc-BI-Xws" firstAttribute="centerY" secondItem="Qw3-a5-K1R" secondAttribute="centerY" id="MyD-zg-a38"/>
                                                 <constraint firstItem="9r8-iY-fyq" firstAttribute="centerY" secondItem="Sqc-BI-Xws" secondAttribute="centerY" id="VdA-Uf-2u5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Sqc-BI-Xws" secondAttribute="trailing" constant="9" id="VmZ-J7-diH"/>
@@ -9548,11 +9564,21 @@ XXXX XXXX XXXX 1234
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:    $80.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkp-Wv-X1u">
                                                     <rect key="frame" x="483" y="11" width="94" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="94" id="RRM-tB-dhs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="278" y="11" width="99" height="18"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="RRM-tB-dhs"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="RRM-tB-dhs"/>
+                                                        </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -9970,11 +9996,21 @@ XXXX XXXX XXXX 1234
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appointments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UET-LK-zPc">
                                         <rect key="frame" x="27" y="9" width="268" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="M27-D7-YTr"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="137" y="28" width="126" height="24"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="M27-D7-YTr"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="M27-D7-YTr"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -10362,11 +10398,21 @@ XXXX XXXX XXXX 1234
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZ1-W2-X2j">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="9b1-Yw-Ikb"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="155" y="28" width="90" height="24"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9b1-Yw-Ikb"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="9b1-Yw-Ikb"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -11076,11 +11122,21 @@ XXXX XXXX XXXX 1234
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Appointment Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHZ-mS-qMn">
                                                 <rect key="frame" x="20" y="81" width="187" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="188" id="StQ-Kh-HOz"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="20" y="81" width="188" height="24"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="StQ-Kh-HOz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="StQ-Kh-HOz"/>
+                                                    </mask>
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-tF-6G3">
@@ -11151,20 +11207,40 @@ XXXX XXXX XXXX 1234
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Monica Lopez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72t-y5-kTK">
                                                                     <rect key="frame" x="136" y="20" width="105" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="GGp-VH-VWD"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="136" y="20" width="108" height="20"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="GGp-VH-VWD"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <include reference="GGp-VH-VWD"/>
+                                                                        </mask>
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="26 / female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Mi-ffY">
                                                                     <rect key="frame" x="136" y="49" width="74" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="75" id="pdd-P9-UgZ"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="136" y="48" width="75" height="18"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="pdd-P9-UgZ"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <include reference="pdd-P9-UgZ"/>
+                                                                        </mask>
                                                                     </variation>
                                                                 </label>
                                                             </subviews>
@@ -11174,8 +11250,21 @@ XXXX XXXX XXXX 1234
                                                                 <constraint firstItem="TWK-qL-mni" firstAttribute="leading" secondItem="633-PZ-PfC" secondAttribute="leadingMargin" constant="50" id="ePO-to-QFK"/>
                                                                 <constraint firstItem="72t-y5-kTK" firstAttribute="top" secondItem="633-PZ-PfC" secondAttribute="topMargin" constant="12" id="lHc-gm-yj5"/>
                                                                 <constraint firstItem="72t-y5-kTK" firstAttribute="leading" secondItem="TWK-qL-mni" secondAttribute="trailing" constant="8" id="mbv-oQ-WwV"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="72t-y5-kTK" secondAttribute="trailing" id="n9v-dd-zvM">
+                                                                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                                </constraint>
                                                                 <constraint firstItem="Fuo-Mi-ffY" firstAttribute="top" secondItem="72t-y5-kTK" secondAttribute="bottom" constant="8" id="vDp-Ec-j3j"/>
                                                             </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="n9v-dd-zvM"/>
+                                                                </mask>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <mask key="constraints">
+                                                                    <include reference="n9v-dd-zvM"/>
+                                                                </mask>
+                                                            </variation>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </tableViewCell>
@@ -11194,11 +11283,21 @@ XXXX XXXX XXXX 1234
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScU-dw-o3B">
                                                                     <rect key="frame" x="496" y="19" width="35" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="37" id="KcC-SN-Enb"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="330" y="19" width="37" height="18"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="KcC-SN-Enb"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <include reference="KcC-SN-Enb"/>
+                                                                        </mask>
                                                                     </variation>
                                                                 </label>
                                                             </subviews>
@@ -11222,11 +11321,21 @@ XXXX XXXX XXXX 1234
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="300" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total:    $80.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-Yf-rFr">
                                                                     <rect key="frame" x="437" y="18" width="94" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="99" id="vbq-np-pMW"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
-                                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                        <rect key="frame" x="268" y="18" width="99" height="18"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="vbq-np-pMW"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <mask key="constraints">
+                                                                            <include reference="vbq-np-pMW"/>
+                                                                        </mask>
                                                                     </variation>
                                                                 </label>
                                                             </subviews>
@@ -11447,11 +11556,21 @@ XXXX XXXX XXXX 1234
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Schedule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcs-ax-Ctk">
                                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="tfk-lh-Pzr"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="140" y="28" width="120" height="24"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="tfk-lh-Pzr"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="tfk-lh-Pzr"/>
+                                                    </mask>
                                                 </variation>
                                             </label>
                                         </subviews>

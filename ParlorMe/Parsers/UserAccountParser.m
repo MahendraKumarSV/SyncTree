@@ -405,6 +405,7 @@
 {
     NSString *isParseGetUserDetailsSuccessful;
     NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:response options:0 error:Nil];
+    //NSLog(@"responseData: %@",responseData);
     NSString *errorMsg = [responseData objectForKey:@"error"];
     NSDictionary *userDetailsDict = [responseData valueForKey:@"client"];
     

@@ -23,11 +23,15 @@
 #import "SetScheduleViewController.h"
 #import <CoreData/CoreData.h>
 
-@interface LoginViewController ()<WebserviceViewControllerDelegate, UIGestureRecognizerDelegate,FBSDKLoginButtonDelegate>
+@interface LoginViewController ()<WebserviceViewControllerDelegate, UIGestureRecognizerDelegate,FBSDKLoginButtonDelegate, UIAlertViewDelegate, NSURLSessionDelegate>
 {
     NSDictionary *userData;
+    NSString *checkLoginType;
+    NSString *userName;
+    NSString *userPassword;
 }
 
+@property (nonatomic, strong) NSMutableURLRequest* request;
 @property (nonatomic, weak) IBOutlet UIImageView *bgImg;
 @property (weak, nonatomic) IBOutlet UITextField *txtfldEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtfldPassword;

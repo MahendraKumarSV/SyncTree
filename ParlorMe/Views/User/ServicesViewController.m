@@ -16,6 +16,10 @@
 #import "SingletonClass.h"
 #import "SWRevealViewController.h"
 #import "StylistViewController.h"
+#import "StylistAccount.h"
+#import "LoginViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface ExpandedCategory : NSObject
 @property (nonatomic, retain) NSString *selectedCategory;
@@ -131,16 +135,18 @@
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         geocoder = [[CLGeocoder alloc] init];
         
-        if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+        {
             [locationManager performSelector:@selector(requestAlwaysAuthorization) withObject:NULL];
         }
+        
         [locationManager startUpdatingLocation];
     }
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     [self.leftMenuBtn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     //add gesture to view
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     // adding swipe left gesture
     swipeleft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
@@ -1017,12 +1023,38 @@
     
     [self.tblviewOptions reloadData];
     
-    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Unable to process Request" message:errorDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:errorTitle message:errorDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     dispatch_async(dispatch_get_main_queue(), ^{
         // Display/dismiss your alert
         [Utility removeActivityIndicator];
         [alert show];
     });
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if([alertTitle isEqualToString:@"Session Expired"])
+    {
+        //remove user details from local and DB
+        NSArray *firstLoad= [[CoreDataModel sharedCoreDataModel] arrayOfRecordsForEntity:@"User" andPredicate:nil andSortDescriptor:nil forContext:nil];
+        if([firstLoad count] > 0) {
+            [[CoreDataModel sharedCoreDataModel]deleteEntityObject:[firstLoad objectAtIndex:0] withContext:nil];
+        }
+        
+        [[CoreDataModel sharedCoreDataModel]saveContext];
+        [UserAccount removeSharedInstance];
+        [StylistAccount removeSharedInstance];
+        
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
+        
+        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login logOut];
+        
+        LoginViewController *lvc = [storyBoard instantiateViewControllerWithIdentifier:@"LoginSB"];
+        [navController setViewControllers: @[lvc] animated: NO];
+        [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+    }
 }
 
 @end

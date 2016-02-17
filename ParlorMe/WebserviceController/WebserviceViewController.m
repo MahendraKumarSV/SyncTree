@@ -91,9 +91,9 @@
                            // Checking Error
                            if ([response isKindOfClass:[NSHTTPURLResponse class]])
                            {
-                             //  NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                               //NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
                                //NSLog(@"HTTP Error: %ld %@", (long)httpResponse.statusCode, error);
-                               [self.delegate failedWithError:@"Unable to process request." description:error.localizedDescription];
+                               [self.delegate failedWithError:@"Unable to process your request." description:error.localizedDescription];
                                return;
                            }
                            else if (error.code == -1009)
@@ -126,6 +126,16 @@
                                [self.delegate failedWithError:@"Network Not Reachable." description:@"The Internet connection appears to be offline"];
                                return;
                            }
+                           
+                           else if (error.code == -1012)
+                           {
+                               [self.delegate failedWithError:@"Session Expired" description:@"Please re-login to continue"];
+                               return;
+                               /*UIAlertView *expiresSessionAlert = [[UIAlertView alloc]initWithTitle:@"Session Expired" message:@"Please re-login to continue" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                               expiresSessionAlert.tag = 1000;
+                               [expiresSessionAlert show];*/
+                           }
+                           
                            else
                            {
                                [self.delegate failedWithError:@"Unable to process request." description:error.localizedDescription];
@@ -658,8 +668,8 @@
 {
     self.mode = kUserMgmt;
     NSString *endUrl = @"api/v1/users";
-    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"] ;
-    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"] ;
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"];
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"accessToken"];
     NSString *completeId = [NSString stringWithFormat:@"%@?access_token=%@", userId,accessToken];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@",kBaseUrl,endUrl,completeId];
     // NSData *postData = [NSJSONSerialization dataWithJSONObject:postDictionary  options:1 error:nil];
@@ -673,6 +683,8 @@
     self.mode = kGetUserDetails;
     NSString *endUrl = @"api/v1/clients";
     UserAccount *userAccount = [UserAccount sharedInstance];
+    //NSLog(@"accessToken: %@",userAccount.accessToken);//55b09fb369702d49bb000000
+    //userAccount.accessToken = @"87c2a43a9bd67df91e694d0e1271b88d633c565366f26801a7e90fd70b236ee8";
     
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@?access_token=%@",kBaseUrl,endUrl,userAccount.userId,userAccount.accessToken];
     [self requestDataInPath:urlString];
@@ -751,6 +763,8 @@
 {
     self.mode = kCategoryList;
     NSString *endUrl = @"api/v1/categories";
+    //UserAccount *userAccount = [UserAccount sharedInstance];
+    //NSString *completeId = [NSString stringWithFormat:@"?app_id=%@&access_token=%@",kAppId,userAccount.accessToken];
     NSString *completeId = [NSString stringWithFormat:@"?app_id=%@",kAppId];
     NSString *urlString = [NSString stringWithFormat:@"%@/%@/%@",kBaseUrl,endUrl,completeId];
     //NSLog(@"getCategoryNames urlString: %@",urlString);
@@ -768,11 +782,14 @@
     // converting array into string seperated by comma
     NSString *servicesList = [[userAccount.selectedServicesList.allKeys valueForKey:@"description"] componentsJoinedByString:@","];
     NSString *encodedString = [servicesList stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    //userAccount.userLocationPincode = @"33404";
     
     if(userAccount.userLocationPincode)
        urlString = [NSString stringWithFormat:@"%@/%@?app_id=%@&services=%@&location=%@",kBaseUrl,endUrl,kAppId,encodedString,userAccount.userLocationPincode];
     else
        urlString = [NSString stringWithFormat:@"%@/%@?app_id=%@&services=%@",kBaseUrl,endUrl,kAppId,encodedString];
+    
+    NSLog(@"urlString: %@",urlString);
         
     [self requestDataInPath:urlString];
 }
@@ -913,6 +930,8 @@
 {
     self.mode = kGetPartnerSchedule;
     StylistAccount *stylistAC = [StylistAccount sharedInstance];
+    NSLog(@"accessToken: %@",stylistAC.accessToken);
+    //stylistAC.accessToken = @"87c2a43a9bd67df91e694d0e1271b88d633c565366f26801a7e90fd70b236ee8";
     NSString *endUrl = [NSString stringWithFormat:@"api/v1/partners/%@/schedules/get_schedule?access_token=%@",stylistAC.userId,stylistAC.accessToken];
     
     NSString *urlString = [NSString stringWithFormat:@"%@/%@",kBaseUrl,endUrl];

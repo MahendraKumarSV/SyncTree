@@ -15,7 +15,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 @end
-
+/*<key>NSAppTransportSecurity</key>
+<dict>
+<key>NSAllowsArbitraryLoads</key>
+<true/>
+</dict>*/
 @implementation ChangePasswordViewController
 
 - (void)viewDidLoad {

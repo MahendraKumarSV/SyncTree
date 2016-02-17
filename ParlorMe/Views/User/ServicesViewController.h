@@ -8,5 +8,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface ServicesViewController : UIViewController
-
+{
+    NSString *alertTitle;
+}
 @end

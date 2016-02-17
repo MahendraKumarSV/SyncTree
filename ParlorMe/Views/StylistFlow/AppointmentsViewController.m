@@ -82,18 +82,18 @@
     webVC.delegate = self;
     
     initialShownLabel = [[UILabel alloc]init];
-    initialShownLabel.frame = CGRectMake(20, self.view.frame.size.height/2-30, self.view.frame.size.width, 30);
+    initialShownLabel.frame = CGRectMake(0, self.view.frame.size.height/2-30, self.view.frame.size.width, 30);
     initialShownLabel.text = @"Select a date to see available appointments";
-    initialShownLabel.textAlignment = NSTextAlignmentLeft;
+    initialShownLabel.textAlignment = NSTextAlignmentCenter;
     initialShownLabel.layer.zPosition = 100;
     initialShownLabel.font = [UIFont fontWithName:@"Lato-Regular" size:15];
     initialShownLabel.hidden = NO;
     [self.bgScroll addSubview:initialShownLabel];
     
     noAppointmentsLabel = [[UILabel alloc]init];
-    noAppointmentsLabel.frame = CGRectMake(25, self.view.frame.size.height/2-30, self.view.frame.size.width, 30);
+    noAppointmentsLabel.frame = CGRectMake(0, self.view.frame.size.height/2-30, self.view.frame.size.width, 30);
     noAppointmentsLabel.text = @"No Appointments scheduled for this date";
-    noAppointmentsLabel.textAlignment = NSTextAlignmentLeft;
+    noAppointmentsLabel.textAlignment = NSTextAlignmentCenter;
     noAppointmentsLabel.font = [UIFont fontWithName:@"Lato-Regular" size:15];
     noAppointmentsLabel.layer.zPosition = 100;
     

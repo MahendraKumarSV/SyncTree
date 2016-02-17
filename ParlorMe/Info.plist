@@ -2,79 +2,79 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
-	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleVersion</key>
+	<string>1.1.20</string>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.1.20</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
+	<key>FacebookAppID</key>
+	<string>1606518322957172</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>FacebookDisplayName</key>
+	<string>Parlor Me</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>com.dreamorbit.ParlorMe.payment</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.dreamorbit.ParlorMe.payments</string>
 			</array>
-		</dict>
-		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+		</dict>
+		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1606518322957172</string>
 			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1.1.20</string>
-	<key>FacebookAppID</key>
-	<string>1606518322957172</string>
-	<key>FacebookDisplayName</key>
-	<string>Parlor Me</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbauth2</string>
-	</array>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

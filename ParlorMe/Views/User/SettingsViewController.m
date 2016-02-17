@@ -487,6 +487,7 @@
         _mobilePhoneTextField.text = [mobileNumberArray objectAtIndex:1];
         _passwordTextField.text = @"********";
     }
+    
     else if ([response isEqualToString:@"Yes"] && currentAPICalled == kSaveUserDetails)
     {
         [_editButton setTitle:@" " forState:UIControlStateNormal];
@@ -498,6 +499,7 @@
         _mobilePhoneTextField.userInteractionEnabled = NO;
         [_birthdayButton setEnabled:NO];
     }
+    
     else
     {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Unable to process Request." message:response delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -507,6 +509,7 @@
 
 - (void)failedWithError:(NSString*)errorTitle description:(NSString*)errorDescription
 {
+    NSLog(@"errorDescription: %@",errorDescription);
     UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"Unable to process Request." message:errorDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     dispatch_async(dispatch_get_main_queue(), ^{
         // Display/dismiss your alert

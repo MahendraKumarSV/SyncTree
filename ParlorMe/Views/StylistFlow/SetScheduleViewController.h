@@ -5,6 +5,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SetScheduleViewController : UIViewController
-
+@interface SetScheduleViewController : UIViewController<UIAlertViewDelegate>
+{
+    NSString *alertTitle;
+}
 @end

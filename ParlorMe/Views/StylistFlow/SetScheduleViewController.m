@@ -16,6 +16,10 @@
 #import "StylistAccount.h"
 #import "StylistFlowModel.h"
 #import "SWRevealViewController.h"
+#import "LoginViewController.h"
+#import "UserAccount.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface SetScheduleViewController ()<UITabBarControllerDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate, WebserviceViewControllerDelegate, UITextFieldDelegate>
 {
@@ -1233,12 +1237,47 @@
 #pragma mark - Handle Error
 - (void)failedWithError:(NSString*)errorTitle description:(NSString*)errorDescription
 {
+    //NSURLResponse *response;
+    NSError *error = nil;
+    if (error) {
+        
+    }
+    
     UIAlertView* alert = [[UIAlertView alloc]initWithTitle:errorTitle message:errorDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     dispatch_async(dispatch_get_main_queue(), ^{
         // Display/dismiss your alert
         [Utility removeActivityIndicator];
+        alertTitle = errorTitle;
         [alert show];
+        
+        /**/
     });
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if([alertTitle isEqualToString:@"Session Expired"])
+    {
+        //remove user details from local and DB
+        NSArray *firstLoad= [[CoreDataModel sharedCoreDataModel] arrayOfRecordsForEntity:@"User" andPredicate:nil andSortDescriptor:nil forContext:nil];
+        if([firstLoad count] > 0) {
+            [[CoreDataModel sharedCoreDataModel]deleteEntityObject:[firstLoad objectAtIndex:0] withContext:nil];
+        }
+        
+        [[CoreDataModel sharedCoreDataModel]saveContext];
+        [UserAccount removeSharedInstance];
+        [StylistAccount removeSharedInstance];
+        
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
+        
+        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+        [login logOut];
+        
+        LoginViewController *lvc = [storyBoard instantiateViewControllerWithIdentifier:@"LoginSB"];
+        [navController setViewControllers: @[lvc] animated: NO];
+        [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
