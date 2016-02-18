@@ -99,7 +99,7 @@
     }
     
     //add gesture to view, to open the left menu
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     //fetch schedules and partner availablity
     [Utility showActivity:self];

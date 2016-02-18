@@ -43,6 +43,8 @@
 {
     [super viewDidLoad];
     
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
     [self.leftMenuBtn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     
     stylistDetailObj = [[StylistDetails alloc]init];

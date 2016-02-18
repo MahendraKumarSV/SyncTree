@@ -86,8 +86,9 @@
     currentAPICalled = kGetUserDetails;
     webserviceViewController.delegate = self;
     [webserviceViewController getUserDetails];
+    
     //add pan gesture to open the left menu
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -98,7 +98,7 @@
     noAppointmentsLabel.layer.zPosition = 100;
     
     //add gesture to view, to open the left menu
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     [Utility showActivity:self];
     

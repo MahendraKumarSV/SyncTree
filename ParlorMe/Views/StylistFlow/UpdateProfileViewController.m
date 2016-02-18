@@ -81,7 +81,7 @@
     self.serviceTypesTable.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     //add gesture to view, to open the left menu
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     [self.leftMenuBtn addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
 }
