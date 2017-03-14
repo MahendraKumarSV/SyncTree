@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A7455DB5EB16E5123759A502'
+               BlueprintIdentifier = '6AE0FDA647DD2F437584FE2481946FB1'
                BlueprintName = 'LatoFont'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libLatoFont.a'>

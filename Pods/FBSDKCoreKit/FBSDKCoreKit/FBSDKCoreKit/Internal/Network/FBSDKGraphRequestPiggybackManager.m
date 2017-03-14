@@ -30,7 +30,7 @@ static int const FBSDKTokenRefreshRetrySeconds = 60 * 60;           // hour
   if ([FBSDKSettings appID].length > 0) {
     BOOL safeForPiggyback = YES;
     for (FBSDKGraphRequestMetadata *metadata in connection.requests) {
-      if (![metadata.request.version isEqualToString:FBSDK_TARGET_PLATFORM_VERSION] ||
+      if (![metadata.request.version isEqualToString:[FBSDKSettings graphAPIVersion]] ||
           [metadata.request hasAttachments]) {
         safeForPiggyback = NO;
         break;
@@ -51,7 +51,7 @@ static int const FBSDKTokenRefreshRetrySeconds = 60 * 60;           // hour
   __block NSString *tokenString = nil;
   __block NSNumber *expirationDateNumber = nil;
   __block int expectingCallbacksCount = 2;
-  void (^expectingCallbackComplete)() = ^() {
+  void (^expectingCallbackComplete)(void) = ^{
     if (--expectingCallbacksCount == 0) {
       FBSDKAccessToken *currentToken = [FBSDKAccessToken currentAccessToken];
       NSDate *expirationDate = currentToken.expirationDate;

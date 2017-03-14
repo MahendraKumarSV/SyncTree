@@ -338,16 +338,34 @@
     if (encodedPaymentData) {
         tokenParameterValue[@"paymentData"] = encodedPaymentData;
     }
-    if (payment.token.paymentInstrumentName) {
-        tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentInstrumentName;
-    }
+	
+    // iOS 9 path: PKPaymentToken -paymentMethod is new in iOS 9
+	if ([payment.token respondsToSelector:@selector(paymentMethod)]) {
+		if (payment.token.paymentMethod.network) {
+			tokenParameterValue[@"paymentNetwork"] = payment.token.paymentMethod.network;
+		}
+		
+		if (payment.token.paymentMethod.displayName) {
+			tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentMethod.displayName;
+		}
+	} else {
+        // iOS 8 path: methods were deprecated in iOS 9
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+		if (payment.token.paymentInstrumentName) {
+			tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentInstrumentName;
+		}
+		
+		if (payment.token.paymentNetwork) {
+			tokenParameterValue[@"paymentNetwork"] = payment.token.paymentNetwork;
+		}
+#pragma clang diagnostic pop
+	}
+
     if (payment.token.transactionIdentifier) {
         tokenParameterValue[@"transactionIdentifier"] = payment.token.transactionIdentifier;
     }
-    if (payment.token.paymentNetwork) {
-        tokenParameterValue[@"paymentNetwork"] = payment.token.paymentNetwork;
-    }
-
+    
     NSMutableDictionary *requestParameters = [self metaPostParameters];
     [requestParameters addEntriesFromDictionary:@{ @"applePaymentToken": tokenParameterValue,
                                                    @"authorization_fingerprint": self.clientToken.authorizationFingerprint,
@@ -360,10 +378,21 @@
 
                 BTMutableApplePayPaymentMethod *paymentMethod = [applePayCards firstObject];
 
-                paymentMethod.shippingAddress = payment.shippingAddress;
                 paymentMethod.shippingMethod = payment.shippingMethod;
+				
+                // iOS 9 path: shippingContact and billingContact are new in iOS 9
+				if ([payment respondsToSelector:@selector(shippingContact)]) {
+					paymentMethod.shippingContact = payment.shippingContact;
+                    paymentMethod.billingContact = payment.billingContact;
+				}
+                
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                // To ensure backwards compatibility with old iOS 8 code, always pass through the deprecated addresses, even on iOS 9 devices
+                paymentMethod.shippingAddress = payment.shippingAddress;
                 paymentMethod.billingAddress = payment.billingAddress;
-
+#pragma clang diagnostic pop
+                
                 successBlock([paymentMethod copy]);
             }
         } else {

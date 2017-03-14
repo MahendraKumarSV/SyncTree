@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '86DFBB242FD8D1E617EC9E4E'
+               BlueprintIdentifier = '5EEED41AB881E4A0C271299EBB9CD411'
                BlueprintName = 'AsyncImageView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libAsyncImageView.a'>
