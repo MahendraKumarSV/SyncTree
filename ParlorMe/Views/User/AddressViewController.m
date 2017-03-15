@@ -520,7 +520,7 @@
         
         //[self dismissViewControllerAnimated:YES completion:nil];
         
-        [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
         [[SingletonClass shareManager]setDirectSignUp:@"YES"];
         
         //[self performSelector:@selector(showServicesScreen) withObject:self afterDelay:0.01];

@@ -76,5 +76,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>&quot;Access your photos&quot;</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>&quot;Access your photos&quot;</string>
 </dict>
 </plist>
